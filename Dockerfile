@@ -17,6 +17,7 @@ RUN apt-get update \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && ./toolchain.sh \
+    && make -C $PS2SDK/samples all clean \
     && rm -rf /toolchain /var/lib/apt/lists/*
 
 WORKDIR /src
