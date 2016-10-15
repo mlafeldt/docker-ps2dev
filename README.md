@@ -6,5 +6,5 @@ Use it to cross-compile your PS2 projects like this:
 
 ```bash
 cd $PROJECT
-docker run -it --rm -v $(PWD):/src mlafeldt/ps2dev make
+docker run -it --rm -v "$PWD:/src" mlafeldt/ps2dev make
 ```
