@@ -21,7 +21,7 @@ RUN apt-get update \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && cp -av /scripts/* scripts/ \
     && ./toolchain.sh \
-    && rm -rf /toolchain /var/lib/apt/lists/*
+    && rm -rf /scripts /toolchain /var/lib/apt/lists/*
 
 WORKDIR /src
 CMD ["/bin/bash"]
