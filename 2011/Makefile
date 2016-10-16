@@ -1,4 +1,4 @@
-IMAGE := mlafeldt/ps2dev
+IMAGE := mlafeldt/ps2dev:2011
 
 build:
 	docker build --force-rm -t $(IMAGE) .
