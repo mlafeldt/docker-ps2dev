@@ -2,7 +2,7 @@
 
 [![](https://images.microbadger.com/badges/image/mlafeldt/ps2dev.svg)](https://microbadger.com/images/mlafeldt/ps2dev)
 
-Cross-compile your PS2 projects inside a Docker container based on
+Cross-compile your PS2 homebrew projects inside a Docker container based on
 [ps2toolchain](https://github.com/ps2dev/ps2toolchain).
 
 ## Quick Start
