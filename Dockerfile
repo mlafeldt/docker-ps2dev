@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y autoconf bzip2 gcc git make patch wget zip \
+    && apt-get install -y autoconf bzip2 gcc git make patch vim wget zip \
     && git clone git://github.com/ps2dev/ps2toolchain.git /toolchain \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
