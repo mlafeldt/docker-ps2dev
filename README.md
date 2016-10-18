@@ -17,15 +17,14 @@ docker run -it --rm -v "$PWD:/src" mlafeldt/ps2dev make
 This will mount the current folder to `/src` in the container and then run
 `make` inside `/src`. You may execute other commands, of course.
 
-Omit the command entirely to get a login shell (`/bin/bash`) in the running
-container.
-
-There's also a "2011" tag for projects depending on a PS2SDK version from that
-year:
+Omit the command to get a login shell (`/bin/bash`) in the running container:
 
 ```bash
-docker run -it --rm -v "$PWD:/src" mlafeldt/ps2dev:2011 make
+docker run -it --rm -v "$PWD:/src" mlafeldt/ps2dev
 ```
+
+There's also a "2011" tag, i.e. `mlafeldt/ps2dev:2011`, for projects depending
+on a PS2SDK version from that year.
 
 ## Continuous Integration
 
