@@ -1,6 +1,7 @@
 # A Docker Image for PS2 Development
 
 [![](https://images.microbadger.com/badges/image/mlafeldt/ps2dev.svg)](https://microbadger.com/images/mlafeldt/ps2dev)
+[![](https://img.shields.io/docker/pulls/mlafeldt/ps2dev.svg?maxAge=604800)](https://hub.docker.com/r/mlafeldt/ps2dev/)
 
 Cross-compile your PS2 homebrew projects inside a Docker container based on
 [ps2toolchain](https://github.com/ps2dev/ps2toolchain).
