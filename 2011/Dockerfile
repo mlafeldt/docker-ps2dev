@@ -15,13 +15,32 @@ COPY scripts /scripts
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y autoconf bzip2 gcc git make patch vim wget zip \
+    && apt-get install -y \
+        autoconf \
+        bzip2 \
+        gcc \
+        git \
+        libucl-dev \
+        make \
+        patch \
+        vim \
+        wget \
+        zip \
+        zlib1g-dev \
     && git clone git://github.com/ps2dev/ps2toolchain.git /toolchain \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && cp -av /scripts/* scripts/ \
     && ./toolchain.sh \
-    && rm -rf /scripts /toolchain /ps2dev/test.tmp /ps2dev/ps2sdk/test.tmp /var/lib/apt/lists/*
+    && git clone git://github.com/ps2dev/ps2-packer.git /ps2-packer \
+    && make install -C /ps2-packer \
+    && rm -rf \
+        /ps2-packer \
+        /ps2dev/ps2sdk/test.tmp \
+        /ps2dev/test.tmp \
+        /scripts \
+        /toolchain \
+        /var/lib/apt/lists/*
 
 WORKDIR /src
 CMD ["/bin/bash"]
