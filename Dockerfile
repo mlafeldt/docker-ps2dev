@@ -2,7 +2,7 @@ FROM ubuntu:12.04
 
 MAINTAINER Mathias Lafeldt <mathias.lafeldt@gmail.com>
 
-ENV TOOLCHAIN_VERSION 417048470d3fb84f9ba974d0e5965c4cfcc1edda
+ENV TOOLCHAIN_VERSION f4bb9106e5fd3de3413002fabbeaa6ebdfd9f994
 
 ENV PS2DEV /ps2dev
 ENV PS2SDK $PS2DEV/ps2sdk
