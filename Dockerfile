@@ -17,7 +17,7 @@ RUN apt-get update \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && ./toolchain.sh \
-    && rm -rf /toolchain /var/lib/apt/lists/*
+    && rm -rf /toolchain /ps2dev/test.tmp /ps2dev/ps2sdk/test.tmp /var/lib/apt/lists/*
 
 WORKDIR /src
 CMD ["/bin/bash"]

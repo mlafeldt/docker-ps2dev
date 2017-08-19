@@ -21,7 +21,7 @@ RUN apt-get update \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && cp -av /scripts/* scripts/ \
     && ./toolchain.sh \
-    && rm -rf /scripts /toolchain /var/lib/apt/lists/*
+    && rm -rf /scripts /toolchain /ps2dev/test.tmp /ps2dev/ps2sdk/test.tmp /var/lib/apt/lists/*
 
 WORKDIR /src
 CMD ["/bin/bash"]
