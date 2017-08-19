@@ -28,10 +28,13 @@ RUN apt-get update \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && ./toolchain.sh \
+    && git clone git://github.com/ps2dev/ps2eth.git /ps2dev/ps2eth \
+    && make -C /ps2dev/ps2eth \
     && git clone git://github.com/ps2dev/ps2-packer.git /ps2-packer \
     && make install -C /ps2-packer \
     && rm -rf \
         /ps2-packer \
+        /ps2dev/ps2eth/.git \
         /ps2dev/ps2sdk/test.tmp \
         /ps2dev/test.tmp \
         /toolchain \
