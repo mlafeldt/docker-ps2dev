@@ -44,6 +44,14 @@ services:
 script: docker run -it --rm -v "$PWD:/src" mlafeldt/ps2dev make test
 ```
 
+## Examples
+
+Projects known to use the Docker image:
+
+* [PS2rd](https://github.com/mlafeldt/ps2rd)
+* [PS2SDK](https://github.com/ps2dev/ps2sdk)
+* [ps2link](https://github.com/ps2dev/ps2link)
+
 ## Author
 
 This project is being developed by [Mathias Lafeldt](https://twitter.com/mlafeldt).
